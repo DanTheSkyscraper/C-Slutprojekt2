@@ -4,6 +4,12 @@
 
     public int weaponDamage;
 
+    public int weaponCriticalDamage;
+
+    public int weaponBlock;
+
+    public int weaponAccuracy;
+
     //----------------------------------------------------------------------
     //----------------------------------------------------------------------
 
@@ -17,4 +23,10 @@
     {
         return Random.Shared.Next(weaponDamage);
     }
+
+    public virtual int WeaponBlock()
+    {
+        return Random.Shared.Next(weaponBlock);
+    }
+    
 }
