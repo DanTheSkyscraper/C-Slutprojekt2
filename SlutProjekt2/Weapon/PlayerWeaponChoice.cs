@@ -34,7 +34,7 @@
         else
         {
             Console.WriteLine("\n\nYou have chosen the Axe.");
-            return new Axe();
+            return new Halberd();
         }
     }
 
