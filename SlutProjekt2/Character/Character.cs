@@ -11,5 +11,35 @@
     //----------------------------------------------------------------------
     //----------------------------------------------------------------------
 
-    
+    public Character()
+    {
+        Weapon weapon = new();
+    }
+
+    public virtual void SetName()
+    {
+
+    }
+
+    public void Attack(Character target, Difficulty difficulty)
+    {
+        Console.WriteLine($"\n\n{name} attacks with {weapon.weaponName}.");
+        int weaponDamage = weapon.Attack();
+        if(this is EnemyCharacter)
+        {
+            //weaponDamage = difficulty.ModifyDamage(weaponDamage);
+        }
+        target.health -= weaponDamage;
+        target.health = Math.Max(0, target.health);
+        Console.WriteLine($"\n\n{name} dealt {weaponDamage} damage!");
+    }
+
+    // public void WeaponCriticalAttack(Character target)
+    // {
+    //     Console.WriteLine($"\n\n{name} attacks with {weapon.weaponName}");
+    //     int weaponDamage = weapon.WeaponCriticalAttack();
+    //     target.health -= weaponDamage;
+    //     target.health = Math.Max(0, target.health);
+    //     Console.WriteLine($"\n\n{name} dealt {weaponDamage} damage!");
+    //}
 }

@@ -17,7 +17,7 @@
     {
         return Random.Shared.Next(weaponDamage);
     }
-
+    
 
     public virtual int CriticalAttack()
     {
