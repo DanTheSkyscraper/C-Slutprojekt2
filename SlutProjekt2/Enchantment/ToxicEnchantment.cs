@@ -1,13 +1,13 @@
-﻿public class ElectricityEnchantment : Enchantment
+﻿public class ToxicEnchantment : Enchantment
 {
     private Random Generator = new Random();
 
     //----------------------------------------------------------------------
     //----------------------------------------------------------------------
 
-    public ElectricityEnchantment()
+    public ToxicEnchantment()
     {
-        enchantmentName = "Electricity Enchantment";
-        enchantmentDamage = Generator.Next(2, 3);
+        enchantmentName = "Toxic Enchantment";
+        enchantmentDamage = Generator.Next(1, 3);
     }
 }
