@@ -7,10 +7,10 @@
 
     public Spear()
     {
-        weaponName = "Spear";
-        weaponDamage = Generator.Next(2, 7);
-        weaponCriticalDamage = 4;
-        weaponBlock = Generator.Next(1, 4);
-        weaponAccuracy = 8;
+        WeaponName = "Spear";
+        WeaponDamage = Generator.Next(2, 7);
+        WeaponCriticalDamage = 4;
+        WeaponBlock = Generator.Next(1, 4);
+        WeaponAccuracy = 8;
     }
 }

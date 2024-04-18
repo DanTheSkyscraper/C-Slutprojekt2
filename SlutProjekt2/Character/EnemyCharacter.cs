@@ -13,34 +13,34 @@
 
         if(eWeapon == 1)
         {
-            weapon = new Sword();
+            Weapon = new Sword();
         }
         else if(eWeapon == 2)
         {
-            weapon = new Halberd();
+            Weapon = new Halberd();
         }
         else if(eWeapon == 3)
         {
-            weapon = new Spear();
+            Weapon = new Spear();
         }
         else if(eWeapon == 4)
         {
-            weapon = new Mace();
+            Weapon = new Mace();
         }
         else if(eWeapon == 5)
         {
-            weapon = new Shortbow();
+            Weapon = new Shortbow();
         }
         else
         {
-            weapon = new Longbow();
+            Weapon = new Longbow();
         }
     }
 
     public override void SetName()
     {
         int i = Random.Shared.Next(names.Count);
-        name = names[i];
+        Name = names[i];
     }
 
     public bool GetAlive()
@@ -50,7 +50,7 @@
 
     public void HealthStatusCheck()
     {
-        if(health <= 0)
+        if(Health <= 0)
         {
             isAlive = false;
         }

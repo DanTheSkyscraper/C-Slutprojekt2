@@ -8,7 +8,7 @@
     public override void SetName()
     {
         Console.WriteLine("\n\nWrite your name here:");
-        name = Console.ReadLine();
+        Name = Console.ReadLine();
     }
 
     public bool GetAlive()
@@ -18,7 +18,7 @@
 
     public void HealthStatusCheck()
     {
-        if(health <= 0)
+        if(Health <= 0)
         {
             isAlive = false;
         }

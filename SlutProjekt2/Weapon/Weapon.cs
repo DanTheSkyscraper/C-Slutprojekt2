@@ -1,32 +1,32 @@
 ﻿public class Weapon
 {
-    public string weaponName;
+    public string WeaponName {get; set;}
 
-    public int weaponDamage;
+    public int WeaponDamage {get; set;}
 
-    public int weaponCriticalDamage;
+    public int WeaponCriticalDamage {get; set;}
 
-    public int weaponBlock;
+    public int WeaponBlock {get; set;}
 
-    public int weaponAccuracy;
+    public int WeaponAccuracy {get; set;}
 
     //----------------------------------------------------------------------
     //----------------------------------------------------------------------
 
     public int Attack()
     {
-        return Random.Shared.Next(weaponDamage);
+        return Random.Shared.Next(WeaponDamage);
     }
     
 
     public virtual int CriticalAttack()
     {
-        return Random.Shared.Next(weaponDamage);
+        return Random.Shared.Next(WeaponDamage);
     }
 
-    public virtual int WeaponBlock()
+    public virtual int WeaponBlocked()
     {
-        return Random.Shared.Next(weaponBlock);
+        return Random.Shared.Next(WeaponBlock);
     }
     
 }

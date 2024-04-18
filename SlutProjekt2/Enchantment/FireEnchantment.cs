@@ -7,7 +7,7 @@
 
     public FireEnchantment()
     {
-        enchantmentName = "Fire Enchantment";
-        enchantmentDamage = Generator.Next(1, 4);
+        EnchantmentName = "Fire Enchantment";
+        EnchantmentDamage = Generator.Next(1, 4);
     }
 }

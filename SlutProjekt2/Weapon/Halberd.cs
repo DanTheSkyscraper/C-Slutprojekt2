@@ -7,11 +7,11 @@
 
     public Halberd()
     {
-        weaponName = "Halberd";
-        weaponDamage = Generator.Next(4, 9);
-        weaponCriticalDamage = 5;
-        weaponBlock = Generator.Next(1, 4);
-        weaponAccuracy = 5;
+        WeaponName = "Halberd";
+        WeaponDamage = Generator.Next(4, 9);
+        WeaponCriticalDamage = 5;
+        WeaponBlock = Generator.Next(1, 4);
+        WeaponAccuracy = 5;
     }
 
     

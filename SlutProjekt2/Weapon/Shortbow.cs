@@ -7,10 +7,10 @@
 
     public Shortbow()
     {
-        weaponName = "Shortbow";
-        weaponDamage = Generator.Next(1, 5);
-        weaponCriticalDamage = 4;
-        weaponBlock = Generator.Next(1, 3);
-        weaponAccuracy = 7;
+        WeaponName = "Shortbow";
+        WeaponDamage = Generator.Next(1, 5);
+        WeaponCriticalDamage = 4;
+        WeaponBlock = Generator.Next(1, 3);
+        WeaponAccuracy = 7;
     }
 }

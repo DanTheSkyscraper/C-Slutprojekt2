@@ -8,9 +8,9 @@
     public override int CriticalAttack()
     {
         Console.WriteLine("\n\nYou attack with a heavy strike!");
-        if(Random.Shared.Next(1, 10) <= weaponAccuracy)
+        if(Random.Shared.Next(1, 10) <= WeaponAccuracy)
         {
-            return weaponCriticalDamage + Random.Shared.Next(weaponDamage);
+            return WeaponCriticalDamage + Random.Shared.Next(WeaponDamage);
         }
         else
         {
@@ -19,18 +19,18 @@
         }
     }
 
-    public override int WeaponBlock()
+    public override int WeaponBlocked()
     {
         Console.WriteLine("\n\nYou blocked with your weapon.");
-        return Random.Shared.Next(weaponDamage) - Random.Shared.Next(weaponBlock);
+        return Random.Shared.Next(WeaponDamage) - Random.Shared.Next(WeaponBlock);
     }
 
     public int weaponAccuracyCheck()
     {
-        if(Random.Shared.Next(1, 10) <= weaponAccuracy)
+        if(Random.Shared.Next(1, 10) <= WeaponAccuracy)
         {
             Console.WriteLine("\n\nYou hit your opponent!");
-            return Random.Shared.Next(weaponDamage);
+            return Random.Shared.Next(WeaponDamage);
         }
         else
         {

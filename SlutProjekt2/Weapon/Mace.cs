@@ -7,10 +7,10 @@
 
     public Mace()
     {
-        weaponName = "Mace";
-        weaponDamage = Generator.Next(4, 10);
-        weaponCriticalDamage = 6;
-        weaponBlock = Generator.Next(2, 4);
-        weaponAccuracy = 4;
+        WeaponName = "Mace";
+        WeaponDamage = Generator.Next(4, 10);
+        WeaponCriticalDamage = 6;
+        WeaponBlock = Generator.Next(2, 4);
+        WeaponAccuracy = 4;
     }
 }

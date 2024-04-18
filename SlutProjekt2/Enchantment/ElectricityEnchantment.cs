@@ -7,7 +7,7 @@
 
     public ElectricityEnchantment()
     {
-        enchantmentName = "Electricity Enchantment";
-        enchantmentDamage = Generator.Next(2, 3);
+        EnchantmentName = "Electricity Enchantment";
+        EnchantmentDamage = Generator.Next(2, 3);
     }
 }

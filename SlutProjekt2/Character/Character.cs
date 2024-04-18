@@ -1,12 +1,14 @@
 ﻿public class Character
 {
-    public string name;
+    public string Name {get; set;} //Property
 
-    public int health = 0;
+    public int Health {get; set;} = 0;
 
-    protected List<string> names = new List<string>() {};
+    protected List<string> names = new List<string>() {"Gerald", "Ruby", "Blake", "Adam", "Theodore", "Lucy", "David", "Marcus"};
 
-    public Weapon weapon;
+    public Weapon Weapon {get; set;}
+
+    public Enchantment Enchantment {get; set;}
 
     //----------------------------------------------------------------------
     //----------------------------------------------------------------------
@@ -23,23 +25,27 @@
 
     public void Attack(Character target, Difficulty difficulty)
     {
-        Console.WriteLine($"\n\n{name} attacks with {weapon.weaponName}.");
-        int weaponDamage = weapon.Attack();
+        Console.WriteLine($"\n\n{Name} attacks with {Weapon.WeaponName}.");
+        int weaponDamage = Weapon.Attack() + Enchantment.EnchantmentDamage;
         if(this is EnemyCharacter)
         {
             weaponDamage = difficulty.ModifyDamage(weaponDamage);
         }
-        target.health -= weaponDamage;
-        target.health = Math.Max(0, target.health);
-        Console.WriteLine($"\n\n{name} dealt {weaponDamage} damage!");
+        target.Health -= weaponDamage;
+        target.Health = Math.Max(0, target.Health);
+        Console.WriteLine($"\n\n{Name} dealt {weaponDamage} damage!");
     }
 
-    public void WeaponCriticalAttack(Character target)
+    public void WeaponCriticalAttack(Character target, Difficulty difficulty)
     {
-        Console.WriteLine($"\n\n{name} attacks with {weapon.weaponName}");
-        int weaponDamage = weapon.CriticalAttack();
-        target.health -= weaponDamage;
-        target.health = Math.Max(0, target.health);
-        Console.WriteLine($"\n\n{name} dealt {weaponDamage} damage!");
+        Console.WriteLine($"\n\n{Name} attacks with {Weapon.WeaponName}");
+        int weaponDamage = Weapon.CriticalAttack() + Enchantment.EnchantmentDamage;
+        if(this is EnemyCharacter)
+        {
+            weaponDamage = difficulty.ModifyCriticalDamage(weaponDamage);
+        }
+        target.Health -= weaponDamage;
+        target.Health = Math.Max(0, target.Health);
+        Console.WriteLine($"\n\n{Name} dealt {weaponDamage} damage!");
     }
 }

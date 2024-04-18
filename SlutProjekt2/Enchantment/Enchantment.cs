@@ -1,11 +1,6 @@
 ﻿public class Enchantment
 {
-    public string enchantmentName;
+    public string EnchantmentName {get; set;}
 
-    public int enchantmentDamage;
-
-    //----------------------------------------------------------------------
-    //----------------------------------------------------------------------
-
-    
+    public int EnchantmentDamage {get; set;}
 }

@@ -7,7 +7,7 @@
 
     public ToxicEnchantment()
     {
-        enchantmentName = "Toxic Enchantment";
-        enchantmentDamage = Generator.Next(1, 3);
+        EnchantmentName = "Toxic Enchantment";
+        EnchantmentDamage = Generator.Next(1, 3);
     }
 }

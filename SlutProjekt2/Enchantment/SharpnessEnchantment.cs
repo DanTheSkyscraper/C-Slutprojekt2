@@ -7,7 +7,7 @@
 
     public SharpnessEnchantment()
     {
-        enchantmentName = "Sharpness Enchantment";
-        enchantmentDamage = Generator.Next(2, 5);
+        EnchantmentName = "Sharpness Enchantment";
+        EnchantmentDamage = Generator.Next(2, 5);
     }
 }
