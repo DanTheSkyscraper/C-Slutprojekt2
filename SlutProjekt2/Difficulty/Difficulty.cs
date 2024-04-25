@@ -17,8 +17,8 @@
         return oldEnemyDamageValue = Generator.Next(4, 9);
     }
 
-    public virtual int ModifyCriticalDamage(int oldEnemyCriticalDamagevalue)
+    public virtual int ModifyCriticalDamage(int oldEnemyCriticalDamageValue)
     {
-        return oldEnemyCriticalDamagevalue = Generator.Next(5, 10);
+        return oldEnemyCriticalDamageValue = Generator.Next(5, 10);
     }
 }

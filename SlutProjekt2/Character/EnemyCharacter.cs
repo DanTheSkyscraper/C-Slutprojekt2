@@ -55,4 +55,16 @@
             isAlive = false;
         }
     }
+
+    public override void WeaponAttack(Character target, Difficulty difficulty)
+    {   
+        if (Random.Shared.Next(2) == 0)
+        {
+            base.WeaponAttack(target, difficulty);
+        }
+        else
+        {
+            base.WeaponCriticalAttack(target, difficulty);
+        }
+    }
 }

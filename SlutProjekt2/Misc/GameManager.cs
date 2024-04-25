@@ -9,24 +9,24 @@
     {
         if(player.GetAlive() == true)
         {
-            Console.WriteLine($"\n\nPlayer '{player.Name}' status: Alive");
+            Console.WriteLine($"\nPlayer '{player.Name}' status: Alive");
         }
         else
         {
-            Console.WriteLine($"\n\nPlayer '{player.Name}' status: Dead");
+            Console.WriteLine($"\nPlayer '{player.Name}' status: Dead");
         }
         Console.WriteLine($"\nPlayer '{player.Name}' Health: {player.Health}");
         Console.WriteLine($"Player '{player.Name}' Weapon: {player.Weapon.WeaponName}");
 
         if(enemy.GetAlive() == true)
         {
-            Console.WriteLine($"\n\nEnemy '{enemy.Name}' status: Alive");
+            Console.WriteLine($"\nEnemy Player'{enemy.Name}' status: Alive");
         }
         else
         {
-            Console.WriteLine($"\n\nEnemy '{enemy.Name}' status: Dead");
+            Console.WriteLine($"\nEnemy Player'{enemy.Name}' status: Dead");
         }
-        Console.WriteLine($"\nPlayer '{enemy.Name}' Health: {enemy.Health}");
-        Console.WriteLine($"Player '{enemy.Name}' Weapon: {enemy.Weapon.WeaponName}");
+        Console.WriteLine($"\nEnemy Player '{enemy.Name}' Health: {enemy.Health}");
+        Console.WriteLine($"Enemy Player '{enemy.Name}' Weapon: {enemy.Weapon.WeaponName}");
     }
 }

@@ -10,7 +10,7 @@
 
             if(difficultyChoice != "easy" && difficultyChoice != "medium" && difficultyChoice != "hard")
             {
-                Console.WriteLine("\n\nPlease write only 'easy', 'medium' or 'hard'. You should only write in lowercase.");
+                Console.WriteLine("\nPlease write only 'easy', 'medium' or 'hard'. You should only write in lowercase.");
             }
         }
 

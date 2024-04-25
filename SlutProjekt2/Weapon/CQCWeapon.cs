@@ -4,39 +4,34 @@
 
     //----------------------------------------------------------------------
     //----------------------------------------------------------------------
-
-    public override int CriticalAttack()
+    public override int Attack()
     {
-        Console.WriteLine("\n\nYou attack with a heavy strike!");
+
         if(Random.Shared.Next(1, 10) <= WeaponAccuracy)
         {
-            return WeaponCriticalDamage + Random.Shared.Next(WeaponDamage);
-        }
-        else
-        {
-            Console.WriteLine("\n\nYou missed your opponent!");
-            return 0;
-        }
-    }
-
-    public override int WeaponBlocked()
-    {
-        Console.WriteLine("\n\nYou blocked with your weapon.");
-        return Random.Shared.Next(WeaponDamage) - Random.Shared.Next(WeaponBlock);
-    }
-
-    public int weaponAccuracyCheck()
-    {
-        if(Random.Shared.Next(1, 10) <= WeaponAccuracy)
-        {
-            Console.WriteLine("\n\nYou hit your opponent!");
+            Console.WriteLine("\n\nHit!");
             return Random.Shared.Next(WeaponDamage);
         }
         else
         {
-            Console.WriteLine("\n\nYou missed your opponent!");
+            Console.WriteLine("\n\nMiss!");
             return 0;
         }
 
     }
+
+    public override int CriticalAttack()
+    {
+        if(Random.Shared.Next(1, 10) <= WeaponAccuracy)
+        {
+            Console.WriteLine("\n\nHit!");
+            return WeaponCriticalDamage + Random.Shared.Next(WeaponDamage);
+        }
+        else
+        {
+            Console.WriteLine("\n\nMiss!");
+            return 0;
+        }
+    }
+
 }

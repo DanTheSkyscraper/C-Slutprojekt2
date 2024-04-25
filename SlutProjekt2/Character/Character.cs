@@ -2,7 +2,7 @@
 {
     public string Name {get; set;} //Property
 
-    public int Health {get; set;} = 0;
+    public int Health {get; set;} = 100;
 
     protected List<string> names = new List<string>() {"Gerald", "Ruby", "Blake", "Adam", "Theodore", "Lucy", "David", "Marcus"};
 
@@ -23,7 +23,7 @@
 
     }
 
-    public void Attack(Character target, Difficulty difficulty)
+    public virtual void WeaponAttack(Character target, Difficulty difficulty)
     {
         Console.WriteLine($"\n\n{Name} attacks with {Weapon.WeaponName}.");
         int weaponDamage = Weapon.Attack() + Enchantment.EnchantmentDamage;
@@ -33,7 +33,7 @@
         }
         target.Health -= weaponDamage;
         target.Health = Math.Max(0, target.Health);
-        Console.WriteLine($"\n\n{Name} dealt {weaponDamage} damage!");
+        Console.WriteLine($"\n{Name} dealt {weaponDamage} damage!");
     }
 
     public void WeaponCriticalAttack(Character target, Difficulty difficulty)
@@ -46,6 +46,6 @@
         }
         target.Health -= weaponDamage;
         target.Health = Math.Max(0, target.Health);
-        Console.WriteLine($"\n\n{Name} dealt {weaponDamage} damage!");
+        Console.WriteLine($"\n{Name} dealt {weaponDamage} damage!");
     }
 }

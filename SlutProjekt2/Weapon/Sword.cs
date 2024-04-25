@@ -10,7 +10,6 @@
         WeaponName = "Sword";
         WeaponDamage = Generator.Next(2, 9);
         WeaponCriticalDamage = 3;
-        WeaponBlock = Generator.Next(2, 5);
         WeaponAccuracy = 6;
     }
 }

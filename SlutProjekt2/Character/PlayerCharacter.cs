@@ -7,7 +7,7 @@
 
     public override void SetName()
     {
-        Console.WriteLine("\n\nWrite your name here:");
+        Console.WriteLine("\nWrite your name here:");
         Name = Console.ReadLine();
     }
 

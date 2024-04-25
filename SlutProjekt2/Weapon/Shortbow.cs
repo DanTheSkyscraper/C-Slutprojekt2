@@ -10,7 +10,6 @@
         WeaponName = "Shortbow";
         WeaponDamage = Generator.Next(1, 5);
         WeaponCriticalDamage = 4;
-        WeaponBlock = Generator.Next(1, 3);
         WeaponAccuracy = 7;
     }
 }

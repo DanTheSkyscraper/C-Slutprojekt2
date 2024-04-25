@@ -6,27 +6,18 @@
 
     public int WeaponCriticalDamage {get; set;}
 
-    public int WeaponBlock {get; set;}
-
     public int WeaponAccuracy {get; set;}
 
     //----------------------------------------------------------------------
     //----------------------------------------------------------------------
 
-    public int Attack()
+    public virtual int Attack()
     {
         return Random.Shared.Next(WeaponDamage);
     }
-    
 
     public virtual int CriticalAttack()
     {
         return Random.Shared.Next(WeaponDamage);
     }
-
-    public virtual int WeaponBlocked()
-    {
-        return Random.Shared.Next(WeaponBlock);
-    }
-    
 }
