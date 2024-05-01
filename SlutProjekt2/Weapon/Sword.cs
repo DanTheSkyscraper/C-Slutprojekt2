@@ -1,10 +1,12 @@
-﻿public class Sword : CQCWeapon
+﻿public class Sword : CQCWeapon //Sword is a type of CQCWeapon (Inheritence). This makes it so that it, for example, has a WeaponName, WeaponDamage, WeaponCriticalDamage and a WeaponAccuracy value.
 {
+    //This Random Generator makes it so that the parts of the code below that make use of it are randomized.
     private Random Generator = new Random();
 
     //----------------------------------------------------------------------
     //----------------------------------------------------------------------
 
+    //This code randomizes the amount of damage that the sword does, sets a specific value for the critical damage and accuracy of the sword, as well as naming the sword 'Sword' in the WeaponName variable.
     public Sword()
     {
         WeaponName = "Sword";

@@ -10,17 +10,19 @@
 
             if(weaponTypeChoice != "a" && weaponTypeChoice != "b")
             {
+                //This Console.WriteLine informs the player that they can only type 'a' or 'b', and that their answer should be in lowercase.
                 Console.WriteLine("\nPlease type only 'a' or 'b'. Your choice should only be written in lowercase.");
             }
         }
 
-        if(weaponTypeChoice == "a")
+        //This code determines what type of weapons the player could choose from depending on what their choice is.
+        if(weaponTypeChoice == "a") //If the player chooses 'a', then they will choose the CQCWeapons.
         {
             Console.WriteLine("\nSo you chose to use CQC weapons? Very well. Which one will you use?");
             Console.WriteLine("\n['a' = Sword // 'b' = Mace // 'c' = Spear // 'd' = Axe]");
             return CQCWeaponChoice();
         }
-        else
+        else //If the player chooses 'b', then they will choose the RangedWeapons.
         {
             Console.WriteLine("\nSo you chose to use Ranged weapons? Very well. Which one will you use?");
             Console.WriteLine("\n['a' = Longbow // 'b' = Shortbow]");
@@ -28,6 +30,7 @@
         }
     }
     
+    //If the player chose 'a', this code runs.
     public static Weapon CQCWeaponChoice()
     {
         string weaponCQCChoice = "";
@@ -66,7 +69,7 @@
         }
     }
 
-
+    //If the player chose 'b', this code runs.
     public static Weapon RangedWeaponChoice()
     {
         string weaponRangedChoice = "";

@@ -9,7 +9,7 @@
 
             if(battleAlt != "a" && battleAlt != "b")
             {
-                //This Console.WriteLine will inform the player that they can only choose to type the following: 'a', 'b' or 'c'.
+                //This Console.WriteLine will inform the player that they can only choose to type the following: 'a' or 'b'.
                 Console.WriteLine("\nPlease type only 'a' or 'b'. Your choice should only be written in lowercase.");
             }
         }
